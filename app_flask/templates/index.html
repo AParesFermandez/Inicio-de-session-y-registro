@@ -39,12 +39,12 @@
                             {% endfor %}
                         </div>
                         <div>
-                            <label for="correo" class="form-label text-light"> 
+                            <label for="email" class="form-label text-light"> 
                                 Email:
                             </label>
-                            <input type="text" id="correo" name="correo" class="form-control">
+                            <input type="text" id="email" name="email" class="form-control">
                             
-                            {% for mensaje in get_flashed_messages(category_filter=['error_correo']) %}
+                            {% for mensaje in get_flashed_messages(category_filter=['error_email']) %}
                             <div class="error alert alert-danger">
                                 {{mensaje}}
                             </div>
@@ -77,10 +77,10 @@
                     <h1 class="text-success"> Login </h1>
                     <form method="POST" action="/procesa/login">
                         <div>
-                            <label for="correo" class="form-label text-light"> 
+                            <label for="email" class="form-label text-light"> 
                                 Email:
                             </label>
-                            <input type="text" id="correo" name="correo" class="form-control">
+                            <input type="text" id="email" name="email" class="form-control">
                         </div>
                         <div>
                             <label for="password" class="form-label text-light"> 

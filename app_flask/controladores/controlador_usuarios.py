@@ -21,8 +21,10 @@ def procesa_registro():
         return redirect('/')
     password_encriptado = bcrypt.generate_password_hash(request.form['password'])
     nuevo_usuario = {
-        **request.form,
-        'password' : password_encriptado
+        'nombre': request.form['nombre'],
+        'apellido': request.form['apellido'],
+        'email': request.form['email'],
+        'password': password_encriptado
     }
     id_usuario = Usuario.crear_uno(nuevo_usuario)
     session['nombre'] = request.form['nombre']

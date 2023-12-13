@@ -41,9 +41,7 @@ class Usuario:
         if len(datos['apellido']) < 2:
             flash('Por favor escribe tu apellido.', 'error_apellido')
             es_valido = False
-# Ejemplo de uso de la expresión regular
-            email = datos['email']
-        if not EMAIL_REGEX.match(datos, email):
+        if not EMAIL_REGEX.match(datos['email']):  # Corrección aquí
             flash('Por favor escribe un email válido.', 'error_email')
             es_valido = False
         if len(datos['password']) < 8:
